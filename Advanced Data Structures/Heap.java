@@ -1,20 +1,52 @@
+import java.util.ArrayList;
+
 /**
- * Heap
+ * Heap class
  */
 public class Heap {
-    private double x = 0;
-    private double numOfChildren = 0;
+    /**
+     * node class
+     */
+    private class Node {
+        private double value;
 
-    public Heap(double x) {
-        this.x = x;
-        this.numOfChildren = Math.pow(2, this.x);
+        public Node(double value) {
+            this.value = value;
+        }
+
+        public void set(double value) {
+            this.value = value;
+        }
+
+        public double get() {
+            return this.value;
+        }
+    }
+
+    private ArrayList<Double> heapArr;
+    private double exponent = 0;
+    private double numChildren = 0;// children number of each node
+
+    public Heap(double exponent) {
+        heapArr = new ArrayList<>();
+        this.exponent = exponent;
+        this.numChildren = Math.pow(2, this.exponent);
     }
 
     // root is index 0
-    private double getLeftChildIndex(int parentIndex) {
-        return parentIndex * numOfChildren + 1;
+    private boolean isEmpty() {
+        if (heapArr.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
     }
+
+    private double getLeftChildIndex(double parentIndex) {
+        return parentIndex * numChildren + 1;
+    }
+
     private double getParentIndex(double childIndex) {
-        return (childIndex - 1) / numOfChildren;
+        return (childIndex - 1) / numChildren;
     }
 }
