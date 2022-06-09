@@ -1,28 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Heap class
  */
 public class Heap {
-    /**
-     * node class
-     */
-    private class Node {
-        private int value;
-
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public void set(int value) {
-            this.value = value;
-        }
-
-        public int get() {
-            return this.value;
-        }
-    }
-
     private ArrayList<Node> heapArr;
     private int exponent = 0;
     private int numChildren = 0;// children number of each node
@@ -43,10 +25,21 @@ public class Heap {
     }
 
     private int getLeftChildValue(int index) {
-        return heapArr.get(getLeftChildIndex(index)).get();
+        return heapArr.get(getLeftChildIndex(index)).getValue();
     }
 
     private int getParentValue(int index) {
-        return heapArr.get(getParentIndex(index)).get();
+        return heapArr.get(getParentIndex(index)).getValue();
+    }
+
+    private void swapNode(int currIndex, int newIndex) {
+        Collections.swap(this.heapArr, currIndex, newIndex);
+    }
+
+    public int rootValue() {
+        if (heapArr.isEmpty()) {
+            throw new IllegalStateException();
+        }
+        return heapArr.get(0).getValue();
     }
 }
