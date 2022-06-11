@@ -117,4 +117,18 @@ public class Heap {
             index = biggerChildIndex;
         }
     }
+
+    public void insert(int value) {
+        Node newNode = new Node(this.heapArr.size(), value);
+        this.heapArr.add(newNode);
+        heapIfUp();
+    }
+
+    public void heapIfUp() {
+        int index = this.heapArr.size() - 1;
+        while (hasParent(index) && getParentValue(index) < this.heapArr.get(index).getValue()) {
+            Collections.swap(this.heapArr, index, getParentIndex(index));
+            index = getParentIndex(index);
+        }
+    }
 }
