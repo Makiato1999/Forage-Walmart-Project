@@ -9,20 +9,14 @@ public class Heap {
      * Node class
      */
     private class Node {
-        private int index;
         private int value;
 
-        public Node(int index, int value) {
-            this.index = index;
+        public Node(int value) {
             this.value = value;
         }
 
         public void setValue(int value) {
             this.value = value;
-        }
-
-        public int getIndex() {
-            return this.index;
         }
 
         public int getValue() {
@@ -77,10 +71,6 @@ public class Heap {
         return result;
     }
 
-    private void swapNode(int currIndex, int newIndex) {
-        Collections.swap(this.heapArr, currIndex, newIndex);
-    }
-
     public int rootValue() {
         if (heapArr.isEmpty()) {
             throw new IllegalStateException();
@@ -106,7 +96,7 @@ public class Heap {
             for (int i = 1; i < this.numChildren; i++) {
                 if (hasLeftChild(index, i)
                         && getLeftChildValue(index, i) > this.heapArr.get(biggerChildIndex).getValue()) {
-                    biggerChildIndex = getLeftChildIndex(index, 1);
+                    biggerChildIndex = getLeftChildIndex(index, i);
                 }
             }
             if (this.heapArr.get(index).getValue() > this.heapArr.get(biggerChildIndex).getValue()) {
@@ -119,7 +109,7 @@ public class Heap {
     }
 
     public void insert(int value) {
-        Node newNode = new Node(this.heapArr.size(), value);
+        Node newNode = new Node(value);
         this.heapArr.add(newNode);
         heapIfUp();
     }
@@ -129,6 +119,12 @@ public class Heap {
         while (hasParent(index) && getParentValue(index) < this.heapArr.get(index).getValue()) {
             Collections.swap(this.heapArr, index, getParentIndex(index));
             index = getParentIndex(index);
+        }
+    }
+
+    public void print() {
+        for (int i = 0; i < this.heapArr.size(); i++) {
+            System.out.print("{index: "+i+", value: "+this.heapArr.get(i).getValue()+"}\n");
         }
     }
 }
