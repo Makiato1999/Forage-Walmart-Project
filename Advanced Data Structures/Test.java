@@ -28,6 +28,8 @@ public class Test {
         int maxValue = heap.popMaxValue();
         System.out.print("\nPop node is {value: "+maxValue+"}, after poping\n");
         heap.print();
-        
+        heap.insert(23);
+        System.out.print("\nAfter inserting\n");
+        heap.print();
     }
 }
