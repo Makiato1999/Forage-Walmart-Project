@@ -10,5 +10,6 @@ Useful resources
 Useful resources
 - [UML concepts](https://java-programming.mooc.fi/part-11/1-class-diagrams)
 - [UML Introduction Video](https://www.youtube.com/watch?v=UI6lqHOVHic)
+- [UML tools](https://lucid.app/documents#/documents?folder_id=home)
 ## Relational Database Design
 ## Data Munging
