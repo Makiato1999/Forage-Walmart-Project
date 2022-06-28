@@ -13,4 +13,5 @@ Useful resources
 - [UML tools](https://lucid.app/documents#/documents?folder_id=home)
 - [Composition and Aggregation](https://en.wikipedia.org/wiki/Class_diagram#Scope)<br/>Differences between Composition and Aggregation
 ## Relational Database Design
+- [ERD Introduction Video](https://www.youtube.com/watch?v=-CuY5ADwn24)<br/>Primary Key and Foreign Key
 ## Data Munging
