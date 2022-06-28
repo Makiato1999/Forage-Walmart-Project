@@ -14,4 +14,5 @@ Useful resources
 - [Composition and Aggregation](https://en.wikipedia.org/wiki/Class_diagram#Scope)<br/>Differences between Composition and Aggregation
 ## Relational Database Design
 - [ERD Introduction Video](https://www.youtube.com/watch?v=-CuY5ADwn24)<br/>Primary Key and Foreign Key
+- [ERD concepts](https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/)<br/>Cardinality
 ## Data Munging
