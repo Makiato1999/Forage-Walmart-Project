@@ -16,4 +16,4 @@ Useful resources
 - [ERD Introduction Video](https://www.youtube.com/watch?v=-CuY5ADwn24)<br/>Primary Key and Foreign Key
 - [ERD concepts](https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/)<br/>Cardinality
 ## Data Munging
-- [Convert csv into SQLite table in Python](https://www.alixaprodev.com/2022/03/csv-file-into-sqlite-table-in-python.html)
+- [Convert csv into SQLite table in Python](https://www.alixaprodev.com/2022/03/csv-file-into-sqlite-table-in-python.html)<br/>Create table, Insert
