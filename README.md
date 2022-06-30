@@ -19,3 +19,5 @@ Useful resources
 ## Data Munging
 Useful resources
 - [Convert csv into SQLite table in Python](https://www.alixaprodev.com/2022/03/csv-file-into-sqlite-table-in-python.html)<br/>Create table, Insert
+<br/>Some issues i had encountered
+- [how to fix 'sqlite3.OperationalError: no such column'](https://itecnote.com/tecnote/python-sqlite3-operationalerror-no-such-column-but-im-not-asking-for-a-column/)<br/>When i used f string to write SELECT sql, i forgot the ''
