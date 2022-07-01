@@ -1,1 +1,1 @@
-I forked the repository with csv and database from [task4_repository](https://github.com/theforage/forage-walmart-task-4)
+All task4 resources(csv and database) are from [task4_repository](https://github.com/theforage/forage-walmart-task-4), I forked this repository and pushed my codes [here](https://github.com/Makiato1999/forage-walmart-task-4).
